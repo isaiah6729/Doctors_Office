@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="732.0" prefWidth="1012.0" style="-fx-background-color: hotpink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isaiah.jdbc.customerrecordspage">
+    <children>
+      <Pane layoutX="13.0" layoutY="209.0" prefHeight="310.0" prefWidth="960.0" style="-fx-background-color: yellow;">
+         <children>
+              <TableView fx:id="crtable" layoutX="32.0" layoutY="55.0" prefHeight="200.0" prefWidth="897.0">
+                  <columns>
+                      <TableColumn fx:id="crtableid" prefWidth="50.0" text="ID" />
+                      <TableColumn fx:id="crtablename" prefWidth="78.0" text="name" />
+                      <TableColumn fx:id="crtablephonenumber" editable="false" prefWidth="97.0" text="phone" />
+                      <TableColumn fx:id="crtablepostalcode" prefWidth="86.0" text="postal code" />
+                  <TableColumn fx:id="crtableaddress" prefWidth="138.0" text="address" />
+                  <TableColumn fx:id="crtablestate" prefWidth="88.0" text="state/province" />
+                  <TableColumn fx:id="crtablecreatedate" prefWidth="101.0" text="create date" />
+                  <TableColumn fx:id="crtablecreateby" prefWidth="85.0" text="created by" />
+                  <TableColumn fx:id="crtableupdated" prefWidth="93.0" text="last updated" />
+                  <TableColumn fx:id="crtableupdateby" text="updated by" />
+                  </columns>
+              </TableView>
+         </children></Pane>
+        <Pane layoutX="22.0" layoutY="14.0" prefHeight="106.0" prefWidth="926.0" style="-fx-background-color: blue;">
+            <children>
+                <TextField alignment="CENTER" layoutX="231.0" layoutY="25.0" prefHeight="57.0" prefWidth="499.0" style="-fx-font-weight: BOLD;" text="Customers">
+               <font>
+                  <Font size="27.0" />
+               </font></TextField>
+            </children>
+        </Pane>
+      <Button layoutX="70.0" layoutY="549.0" mnemonicParsing="false" onAction="#appointmentbutton" prefHeight="25.0" prefWidth="176.0" style="-fx-background-color: yellow;" text="Make an appointment" />
+      <VBox layoutX="802.0" layoutY="127.0" prefHeight="71.0" prefWidth="165.0">
+         <children>
+            <Label text="Today's Date">
+               <font>
+                  <Font name="Gadugi Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="date" alignment="CENTER" editable="false" style="-fx-background-color: yellow; -fx-border-color: black; -fx-font-weight: bold;" />
+         </children>
+      </VBox>
+      <VBox layoutX="480.0" layoutY="549.0" prefHeight="117.0" prefWidth="234.0" spacing="25.0">
+         <children>
+            <HBox prefHeight="41.0" prefWidth="247.0" spacing="35.0">
+               <children>
+                    <Button fx:id="onadd" mnemonicParsing="false" onAction="#onadd" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: yellow;" text="Add" />
+                    <Button fx:id="onupdate" mnemonicParsing="false" onAction="#onupdate" style="-fx-background-color: yellow;" text="Update" />
+                    <Button fx:id="ondelete" mnemonicParsing="false" onAction="#ondelete" style="-fx-background-color: yellow;" text="Delete" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="46.0" prefWidth="236.0" spacing="75.0">
+               <children>
+                    <Button fx:id="onsignout" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#onsignout" style="-fx-background-color: yellow;" text="SIGN OUT" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TextField fx:id="customerresults" layoutX="319.0" layoutY="163.0" prefHeight="25.0" prefWidth="322.0" />
+    </children>
+</AnchorPane>

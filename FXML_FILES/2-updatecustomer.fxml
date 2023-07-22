@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="746.0" prefWidth="490.0" style="-fx-background-color: hotpink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isaiah.jdbc.updatecustomer">
+    <children>
+        <Pane layoutX="55.0" layoutY="11.0" prefHeight="92.0" prefWidth="341.0" style="-fx-background-color: blue;">
+         <children>
+                <TextField alignment="CENTER" editable="false" layoutX="26.0" layoutY="20.0" prefHeight="52.0" prefWidth="289.0" style="-fx-font-weight: BOLD;" text="UPDATE CUSTOMER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+         </children>
+        </Pane>
+      <VBox alignment="CENTER" layoutX="24.0" layoutY="173.0" prefHeight="351.0" prefWidth="166.0" spacing="25.0">
+         <children>
+            <TextField fx:id="updateid" />
+              <TextField fx:id="updatename" promptText="Input Name" />
+              <TextField fx:id="updateaddress" promptText="Input Address" />
+              <TextField fx:id="updatepostalcode" promptText="Input Postal Code" />
+              <TextField fx:id="updatephonenumber" promptText="Input Phone Number" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="234.0" layoutY="173.0" prefHeight="295.0" prefWidth="181.0" spacing="25.0">
+         <children>
+              <ComboBox fx:id="updatecountry" onAction="#oncountry" prefWidth="150.0" promptText="Pick A Country" />
+              <ComboBox fx:id="updatestate" prefWidth="150.0" promptText="Pick A State/Province" />
+         </children>
+      </VBox>
+      <VBox layoutX="226.0" layoutY="120.0" prefHeight="75.0" prefWidth="181.0">
+         <children>
+            <Label text="Today's Date">
+               <font>
+                  <Font name="Gadugi Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="date" editable="false" style="-fx-background-color: yellow; -fx-border-color: black; -fx-font-weight: bold;" />
+         </children>
+      </VBox>
+      <VBox layoutX="325.0" layoutY="441.0" prefHeight="92.0" prefWidth="77.0" spacing="25.0">
+         <children>
+              <Button fx:id="save" mnemonicParsing="false" onAction="#onsave" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: yellow;" text="SAVE" />
+              <Button fx:id="CANCEL" mnemonicParsing="false" onAction="#oncancel" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: yellow;" text="CANCEL" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

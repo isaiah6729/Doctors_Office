@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="594.0" prefWidth="490.0" style="-fx-background-color: hotpink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isaiah.jdbc.addcustomer">
+    <children>
+        <Pane layoutX="83.0" layoutY="14.0" prefHeight="92.0" prefWidth="341.0" style="-fx-background-color: blue;">
+         <children>
+                <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="26.0" layoutY="20.0" prefHeight="52.0" prefWidth="289.0" style="-fx-font-weight: BOLD;" text="ADD CUSTOMER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+         </children>
+        </Pane>
+      <VBox alignment="CENTER" layoutX="25.0" layoutY="208.0" prefHeight="213.0" prefWidth="166.0" spacing="25.0">
+         <children>
+              <TextField fx:id="crname" promptText="Input Name" />
+              <TextField fx:id="craddress" promptText="Input Address" />
+              <TextField fx:id="crpostalcode" promptText="Input Postal Code" />
+              <TextField fx:id="crphonenumber" promptText="Input Phone Number" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="234.0" layoutY="242.0" prefHeight="114.0" prefWidth="181.0" spacing="25.0">
+         <children>
+              <ComboBox fx:id="country" onAction="#oncountry" prefWidth="150.0" promptText="Pick A Country" />
+              <ComboBox fx:id="stateprovince" onMouseClicked="#onstateclick" prefWidth="150.0" promptText="Pick A State/Province" />
+         </children>
+      </VBox>
+      <VBox layoutX="306.0" layoutY="127.0" prefHeight="92.0" prefWidth="158.0">
+         <children>
+            <Label text="Today's Date">
+               <font>
+                  <Font name="Gadugi Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="date" alignment="CENTER" editable="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-font-weight: bold;" />
+         </children>
+      </VBox>
+      <VBox layoutX="335.0" layoutY="439.0" prefHeight="92.0" prefWidth="72.0" spacing="25.0">
+         <children>
+              <Button fx:id="save" mnemonicParsing="false" onAction="#onsave" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: yellow;" text="SAVE" />
+              <Button fx:id="CANCEL" mnemonicParsing="false" onAction="#oncancel" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: yellow;" text="CANCEL" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

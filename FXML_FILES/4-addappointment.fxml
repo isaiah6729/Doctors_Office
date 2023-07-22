@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1321.0" style="-fx-background-color: hotpink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isaiah.jdbc.addappointment">
+    <children>
+      <Pane layoutX="410.0" layoutY="171.0" prefHeight="341.0" prefWidth="817.0" style="-fx-background-color: yellow;">
+         <children>
+              <TableView fx:id="aptable" layoutX="22.0" layoutY="14.0" prefHeight="308.0" prefWidth="782.0">
+                  <columns>
+                      <TableColumn fx:id="apidtable" prefWidth="75.0" text="appt id" />
+                      <TableColumn fx:id="aptabletitle" prefWidth="92.0" text="title" />
+                  <TableColumn fx:id="aptabledescr" prefWidth="74.0" text="descr." />
+                  <TableColumn fx:id="aptableloc" prefWidth="95.0" text="location" />
+                  <TableColumn fx:id="aptablecontact" prefWidth="75.0" text="contact" />
+                  <TableColumn fx:id="aptabletype" prefWidth="75.0" text="type" />
+                  <TableColumn fx:id="aptablestart" prefWidth="75.0" text="start time" />
+                  <TableColumn fx:id="aptableend" prefWidth="75.0" text="end time" />
+                  <TableColumn fx:id="aptablecuid" prefWidth="75.0" text="customer id" />
+                  <TableColumn fx:id="aptableuserid" prefWidth="75.0" text="user id" />
+                  </columns>
+              </TableView>
+         </children>
+      </Pane>
+        <Pane layoutX="55.0" layoutY="11.0" prefHeight="92.0" prefWidth="1195.0" style="-fx-background-color: blue;">
+            <children>
+                <TextField alignment="CENTER" editable="false" layoutX="220.0" layoutY="20.0" prefHeight="52.0" prefWidth="756.0" style="-fx-font-weight: BOLD;" text="ADD APPOINTMENT">
+               <font>
+                  <Font size="25.0" />
+               </font></TextField>
+            </children>
+        </Pane>
+      <VBox layoutX="7.0" layoutY="192.0" prefHeight="351.0" prefWidth="189.0" spacing="10.0">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="167.0" text="Title">
+               <font>
+                  <Font name="Gadugi Bold" size="20.0" />
+               </font>
+            </Label>
+              <TextField fx:id="aptitle" promptText="Title" />
+            <Label layoutX="10.0" layoutY="19.0" prefHeight="34.0" prefWidth="184.0" text="Describe Concerns">
+               <font>
+                  <Font name="Gadugi Bold" size="20.0" />
+               </font>
+            </Label>
+              <TextField fx:id="apdescription" promptText="Description" />
+              <ComboBox fx:id="aptype" prefHeight="25.0" prefWidth="169.0" promptText="Type of appointment" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="167.0" text="Location">
+               <font>
+                  <Font name="Gadugi Bold" size="20.0" />
+               </font>
+            </Label>
+              <TextField fx:id="aplocation" promptText="Location" />
+            <ComboBox fx:id="apCONTACT" prefWidth="150.0" promptText="Choose a Contact" />
+            <Label layoutX="10.0" layoutY="203.0" prefHeight="30.0" prefWidth="180.0" text="Customer Number">
+               <font>
+                  <Font name="Gadugi Bold" size="20.0" />
+               </font>
+            </Label>
+              <TextField fx:id="apcustomer" editable="false" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="220.0" layoutY="257.0" prefHeight="243.0" prefWidth="181.0" spacing="25.0">
+         <children>
+            <DatePicker fx:id="apdate" layoutX="14.0" layoutY="145.0" onAction="#ondate" promptText="Choose a Date" />
+            <ComboBox fx:id="apstart" layoutX="26.0" layoutY="170.0" onAction="#onstart" onMouseClicked="#onstarttimeclick" prefWidth="150.0" promptText="Choose Start Time" />
+            <ComboBox fx:id="apend" onAction="#onend" onMouseClicked="#endtimeclick" prefWidth="150.0" promptText="Choose End Time" />
+            <TextArea editable="false" prefHeight="73.0" prefWidth="181.0" style="-fx-background-color: yellow;" text="Times can only be in increments of 30 min - 1 hr" wrapText="true">
+               <font>
+                  <Font name="Gadugi Bold" size="14.0" />
+               </font></TextArea>
+         </children>
+      </VBox>
+      <HBox layoutX="698.0" layoutY="525.0" prefHeight="34.0" prefWidth="374.0" spacing="35.0">
+         <children>
+              <Button fx:id="save" mnemonicParsing="false" onAction="#onsave" style="-fx-background-color: yellow;" text="SAVE" />
+            <Button fx:id="update" mnemonicParsing="false" onAction="#onupdate" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: yellow;" text="Update Appt" />
+              <Button fx:id="CANCEL" mnemonicParsing="false" onAction="#oncancel" style="-fx-background-color: yellow;" text="Finished" />
+            <Button fx:id="reports" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onreports" style="-fx-background-color: yellow;" text="REPORTS" />
+         </children>
+      </HBox>
+      <VBox layoutX="949.0" layoutY="103.0" prefHeight="92.0" prefWidth="189.0">
+         <children>
+            <Label prefHeight="34.0" prefWidth="167.0" text="Today's Date">
+               <font>
+                  <Font name="Gadugi Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="date" editable="false" style="-fx-background-color: yellow; -fx-border-color: black; -fx-font-weight: bold;" />
+         </children>
+      </VBox>
+      <Button fx:id="delete" layoutX="871.0" layoutY="569.0" mnemonicParsing="false" onAction="#ondelete" style="-fx-background-color: yellow;" text="Delete" />
+      <Label layoutX="227.0" layoutY="233.0" prefHeight="34.0" prefWidth="167.0" text="Choose A Date">
+         <font>
+            <Font name="Gadugi Bold" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

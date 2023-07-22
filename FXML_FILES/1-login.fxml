@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="590.0" style="-fx-background-color: hotpink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isaiah.jdbc.logincontroller">
+    <children>
+        <Pane layoutX="24.0" layoutY="18.0" prefHeight="60.0" prefWidth="540.0" style="-fx-background-color: blue; -fx-border-color: black;">
+            <children>
+                <TextField fx:id="welcomelabel" alignment="CENTER" editable="false" layoutX="189.0" layoutY="14.0" style="-fx-font-weight: bold;" text="WELCOME" />
+            </children>
+        </Pane>
+        <Pane layoutX="76.0" layoutY="98.0" prefHeight="270.0" prefWidth="450.0" style="-fx-background-color: yellow; -fx-border-color: black;">
+            <children>
+                <TextField fx:id="username" layoutX="64.0" layoutY="127.0" style="-fx-border-color: black;" />
+                <TextField fx:id="password" layoutX="263.0" layoutY="127.0" style="-fx-border-color: black;" />
+                <Label fx:id="usernamelabel" layoutX="64.0" layoutY="101.0" style="-fx-font-weight: BOLD;" text="USERNAME" textFill="#202022" />
+                <Label fx:id="passwordlabel" layoutX="279.0" layoutY="101.0" style="-fx-font-weight: BOLD;" text="PASSWORD" textFill="#1a1a1b" />
+                <Button fx:id="submit" layoutX="362.0" layoutY="172.0" mnemonicParsing="false" onAction="#onsubmit" style="-fx-font-weight: bold; -fx-background-color: hotpink;" text="SUBMIT" />
+            <VBox layoutX="64.0" layoutY="172.0" prefHeight="60.0" prefWidth="100.0">
+               <children>
+                      <Label prefHeight="17.0" prefWidth="76.0" text="Language" textFill="#131314">
+                     <font>
+                        <Font name="Gadugi Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="language" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="76.0" text="WHAT" textFill="#1b1b1b">
+                     <font>
+                        <Font name="Gadugi Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="165.0" layoutY="173.0" prefHeight="49.0" prefWidth="136.0">
+               <children>
+                      <Label fx:id="todaysdate" prefHeight="17.0" prefWidth="170.0" text="Today's Date" textFill="#161717">
+                     <font>
+                        <Font name="Gadugi Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time" prefHeight="17.0" prefWidth="119.0" text="WHAT" textFill="#1a1a1b">
+                     <font>
+                        <Font name="Gadugi Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label layoutX="40.0" layoutY="41.0" prefHeight="39.0" prefWidth="386.0" style="-fx-font-weight: bold; -fx-font-style: italic;" text="Dr. Obonick's Office" textFill="#1d5dab">
+               <font>
+                  <Font name="SimSun" size="37.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="31.0" layoutY="412.0" prefHeight="60.0" prefWidth="540.0" style="-fx-background-color: blue; -fx-border-color: black;">
+            <children>
+                <TextField fx:id="Appointsystemlabel" alignment="CENTER" layoutX="207.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Appointment System" />
+            </children>
+        </Pane>
+    </children>
+</Pane>
